@@ -1,0 +1,31 @@
+// ArelTriangulo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float a,b,h;
+	cout<<"Digite la base: ";
+	cin>>b;
+	cout<<"Digite la altura: ";
+	cin>>h;
+	a=(b*h)/2;
+	cout<<"El area del triangulo es: "<<a;
+	getch();
+
+}
+
+-----------------------------------------------
+Proceso Areatriangulo
+	Escribir "Digite Base"
+	leer b
+	Escribir "Digite altura"
+	leer h
+	a<-(b*h)/2
+	Escribir "El area del triangulo es: ",a
+FinProceso
