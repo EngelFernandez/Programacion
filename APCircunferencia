@@ -1,0 +1,29 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float r,a,p,pi=3.1415;
+	cout<<"Digite el radio: ";
+	cin>>r;
+	p=2*pi*r;
+	a=pi*r*r;
+	cout<<"El area de la circunferencia es: "<<a<<endl;
+	cout<<"El perimetro de la circunferencia es: "<<p<<endl;
+	getch();
+}
+
+---------------------------------------------
+
+Proceso APCircunferencia
+	Escribir "Digite el radio de la circunferencia:";
+	leer r;
+	p<-2*pi*r;
+	a<-pi*r^2;
+	Escribir "El area de la circunferencia es: ",a;
+	Escribir "El perimetro de la circunferencia es: ",p;
+FinProceso
