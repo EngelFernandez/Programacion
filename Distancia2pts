@@ -1,0 +1,33 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float x1,x2,y1,y2,d;
+
+	cout<<"Digite valores para x1,y1:"<<endl;
+	cin>>x1>>y1;
+	cout<<"Digite valores para x2,y2:"<<endl;
+	cin>>x2>>y2;
+	d=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+	cout<<"La distacia entre los puntos es: "<<d<<" unidades";
+	getch();
+}
+----------------------------------------------
+Proceso APCircunferencia
+	Escribir "Digite los valores para x1,y1: ";
+	leer x1;
+	leer y1;
+	Escribir "Digite los valores para x2,y2: ";
+	leer x2;
+	leer y2;
+	d<-rc((x2-x1)^2+(y2-y1)^2);
+	escribir "loa distacia entre lso dos puntos es: ",d," unidades";
+FinProceso
+
+
