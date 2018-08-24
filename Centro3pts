@@ -1,0 +1,33 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int a,c,z;
+	a=0
+	for(c=0;c<5;c++)
+		{cout<<"Digite un numero: "<<endl;
+	cin>>a;
+	z<-z+a;}
+	cout<<"El promedio es: "<<(z/5);
+	getch()
+}
+
+-------------------------------+
+
+Proceso promedio5num
+	con<-0;
+	acu<-0;
+	repetir
+	escribir "Digite un valor";
+	leer a;
+	con<-con+1;
+	acu<-acu+a;
+hasta que con=5
+Escribir "El promedio es ",acu/5;
+	
+	
