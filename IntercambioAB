@@ -1,0 +1,36 @@
+// Intercambiar.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int a,b,a1,b1;
+	cout<<"Digite un valor para A: "<<endl;
+	cin>>a;
+	cout<<"Digite un valor para B: "<<endl;
+	cin>>b;
+	a1=b;
+	b1=a;
+	cout<<"Se invirtieron los valores de A y B"<<endl;
+	cout<<"El valor para A es: "<<a1<<endl;
+	cout<<"El valor para B es: "<<b1<<endl;
+	getch();
+}
+ ------------------------------------------------------------------------
+
+Proceso Intercambio
+	Escribir "Digite un valor para A: ";
+	leer a;
+	Escribir "Digite un valor para B: ";
+	leer b;
+	a1<-b;
+	b1<-a;
+	Escribir "Se cambiaron los valores para A y B";
+	Escribir "El valor para A es: ",a1;
+	Escribir "El valor para B es: ",b1;
+FinProceso
