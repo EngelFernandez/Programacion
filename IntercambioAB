@@ -9,16 +9,17 @@ using namespace std;
 
 void main()
 {
-	int a,b,a1,b1;
+	int a,b,aux;
 	cout<<"Digite un valor para A: "<<endl;
 	cin>>a;
 	cout<<"Digite un valor para B: "<<endl;
 	cin>>b;
-	a1=b;
-	b1=a;
+	aux<-a;
+	a<-b;
+	b<-aux;
 	cout<<"Se invirtieron los valores de A y B"<<endl;
-	cout<<"El valor para A es: "<<a1<<endl;
-	cout<<"El valor para B es: "<<b1<<endl;
+	cout<<"El valor para A es: "<<b<<endl;
+	cout<<"El valor para B es: "<<a<<endl;
 	getch();
 }
  ------------------------------------------------------------------------
@@ -28,8 +29,9 @@ Proceso Intercambio
 	leer a;
 	Escribir "Digite un valor para B: ";
 	leer b;
-	a1<-b;
-	b1<-a;
+	aux<-a;
+	a<-b;
+	b<-aux;
 	Escribir "Se cambiaron los valores para A y B";
 	Escribir "El valor para A es: ",a1;
 	Escribir "El valor para B es: ",b1;
