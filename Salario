@@ -1,0 +1,28 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+void main()
+{float salmin=2060,salbru,salto;
+int n,i;
+	
+	cout<<"Digite el numero de empleados"<<endl;
+	cin>>n;
+	for (i=1;i<=n;i++){
+		cout<<"Digite el salario bruto del empleado "<<i<<endl;
+		cin>>salbru;
+		if(salbru>=(4*salmin))
+			salto=salbru-(salbru*(0.121+0.13));
+		else
+			salto=salbru-(salbru*0.121);
+		cout<<"El salario total con descuento es de "<<salto<<endl;
+	}
+	cout<<"Gracias"<<endl;
+
+
+	getch();
+}
