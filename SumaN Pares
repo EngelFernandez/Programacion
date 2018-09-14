@@ -1,0 +1,19 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{float num=0,n,c=0,sum=0;
+	cout<<"Digite N numeros"<<endl;
+	cin>>n;
+	do{
+	c=c+1;
+	num=num+2;
+	sum=sum+num;
+	}while(c<n);
+	cout<<"La suma de los primeros numeros pares es de "<<sum<<endl;
+
+	getch();
+}
