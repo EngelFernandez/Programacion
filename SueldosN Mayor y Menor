@@ -1,0 +1,29 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{float n,c=1,e,may,men;
+
+	cout<<"Digite la cantidad de empleados"<<endl;
+	cin>>n;
+	cout<<"Digite el salario del empleado "<<c<<endl;
+	cin>>e;
+	may=e;
+	men=e;
+	while (c!=n){
+	c=c+1;
+	cout<<"Digite el salario del empleado "<<c<<endl;
+	cin>>e;
+		if (e>=may){
+		may=e;
+		}
+		if (e<=men){
+		men=e;
+		}
+	}
+	cout<<"El mayor sueldo es: "<<may<<endl;
+	cout<<"El menor sueldo es: "<<men<<endl;
+getch();
+}
