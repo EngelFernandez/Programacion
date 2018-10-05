@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int cont(int n,int x);
+void main()
+{
+int n,s=0,x;
+cout<<"Digite la cantidad de N: "<<endl;
+cin>>n;
+cout<<"Digite el valor para X: "<<endl;
+cin>>x;
+s=cont(n,x);
+cout<<"El resultado de la serie es: "<<s<<endl;
+getch();
+}
+int cont(int n,int x)
+{
+	float i,s=0;
+	for(i=1;i<=n;i++)
+	{
+	s=s+pow(x,i);
+	}
+	return s;
+}
