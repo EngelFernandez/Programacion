@@ -8,7 +8,7 @@ int cont(int x);
 void main()
 {
 int n,s=0;
-cout<<"Digite la cantidad de N numeros a sumar: "<<endl;
+cout<<"Digite la cantidad de N numeros a multiplicar: "<<endl;
 cin>>n;
 s=cont(n);
 cout<<"El resultado de la serie es: "<<s<<endl;
