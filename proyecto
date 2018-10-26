@@ -1,0 +1,77 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define max 100
+
+using namespace std;
+
+void cargar(int t,int v[]);
+void eliminar(int t,int v[]);
+void mostrar(int t,int v[]);
+
+void main()
+{
+int op,t,v[max];
+	do{
+	cout<<"introdusca el tamanio"<<endl;
+	cin>>t;
+		if (t<0 || t >100){
+		cout<<"ERROR, Introduzca un valor entre 0 y 100"<<endl;
+		}
+	}while(t<0 || t>100);
+	do{
+	cout<<"-------------Menu------------"<<endl;
+	cout<<"1.Cargar"<<endl;
+	cout<<"2.Eliminar y mostrar"<<endl;
+	cout<<"3.Mostrar sin eliminar"<<endl;
+	cout<<"4.Salir"<<endl;
+	cout<<"Escoga una opcion"<<endl;
+	cin>>op;
+		switch(op)
+		{
+		case 1:
+			cargar(t,v); break;
+		case 2:
+			eliminar(t,v); break;
+		case 3:
+			mostrar(t,v); break;
+		case 4:
+			cout<<"Saliendo..."<<endl; break;
+		default:
+			cout<<"ERROR , opcion invalida"<<endl; break;
+		}
+	}while(op!=4);
+getch();
+}
+
+void cargar(int t,int v[]){
+	for(int i=0;i<t;i++)
+	{
+	cout<<"Introduzca un valor para el vector["<<i+1<<"]"<<endl;
+	cin>>v[i];
+	}
+}
+
+void mostrar(int t,int v[]){
+	for(int i=0;i<t;i++)
+	{
+	cout<<"Este es el valor para el vector["<<i+1<<"] = "<<v[i]<<endl;
+	}      
+}
+void eliminar(int t,int v[]){
+	int aux,j,cont,num;
+	cout<<"Sus resultados son: "<<endl;
+	for(int i=0;i<t;i++)
+	{
+		aux=0;
+		for(int j=i+1;j<t;j++)
+		{
+			if(v[i]==v[j])
+				aux++;
+		}
+
+			if(aux==0)
+      cout<<" "<<v[i]<<" ";
+	}
+	cout<<" "<<endl<<" ";
+}
