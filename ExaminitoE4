@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+void palindromo (string frase);
+
+void main()
+{
+	string frase;
+	cout<<"Digite una frase: "<<endl;
+	getline(cin,frase);
+	palindromo(frase);
+
+	getch();
+
+}
+void palindromo (string frase)
+{
+	int	tam=frase.length();
+	char aux;
+	string frase2;
+	frase2=frase;
+
+	for (int i=0;i<tam/2;i++)
+	{
+		aux=frase[i];
+		frase[i]=frase[tam-1-i];
+		frase[tam-1-i]=aux;
+	}
+
+	if (frase2==frase)
+		cout<<"Es palindromo"<<endl;
+	else
+		cout<<"No es palindromo"<<endl;
+
+}
