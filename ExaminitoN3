@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define max 100
+
+using namespace std;
+
+bool partidario(int v[],int x);
+
+void main()
+{
+	int num,tam,v[max];
+	cout<<"Digite el tamaño del arreglo"<<endl;
+	cin>>tam;
+	arreglo (tam,v);
+	
+	if (partidario(v,tam))
+		cout<<"Es partidario"<<endl;
+	else
+		cout<<"No es partidario"<<endl;
+	getch();
+}
+void arreglo(int x,int v[])
+{
+	cout<<"ingrese valores para el arreglo"<<endl;
+	for (int i=0;i<x;i++)
+	{
+		cout<<"vector ["<<i<<"] : ";
+		cin>>v[i];
+	}
+}
+bool partidario(int v[],int x)
+{
+	for (int i=0;i<x;i=i+2)
+	{
+		for(int j=1;j<x;j=j+2)
+			if (v[i]<v[j])
+			{
+				return false;
+			}
+	}
+	return true;
+}
