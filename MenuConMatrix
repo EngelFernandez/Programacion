@@ -1,0 +1,126 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAXROW 100
+#define MAXCOL 100
+
+using namespace std;
+
+void cargar(int m[MAXROW][MAXCOL],int x,int y);
+void mostrar(int m[MAXROW][MAXCOL],int x, int y);
+void ordenar(int m[MAXROW][MAXCOL],int x,int y);
+int mayor (int matrix[MAXROW][MAXCOL],int n, int m);
+void suma (int m[MAXROW][MAXCOL],n[MAXROW][MAXCOL],int x, int y);
+
+void main()
+{ int col,row,a[MAXROW][MAXCOL],b[MAXROW][MAXCOL],opcion,ab,ac;
+cout<<"------------------MENU-------------------"<<endl;
+cout<<"1)Cargar"<<endl;
+cout<<"2)Mostrar"<<endl;
+cout<<"3)Ordenar"<<endl;
+cout<<"4)mayor"<<endl;
+cout<<"5)Suma de Matriz"<<endl;
+cout<<"0)Salir"<<endl;
+cout<<"Escoga una opcion: ";
+cin>>opcion;
+switch(opcion){
+case 1:cout<<"Digite que MATRIZ desea usar:";
+	cout<<"1) A"<<endl; cout<<"2) B";
+	cin>>ab;
+	cout<<"Digite el tamaño de las filas: ";
+	cin>>row;
+	cout<<"Digite el tamaño de las columnas: ";
+	cin>>col;
+	if (ab==1)
+	cargar(a,row,col);
+	if (ab==2)
+	cargar(b,row,col);
+	break;
+	case 2:
+		cout<<"Digite que MATRIZ desea ver:"<<endl;
+		cout<<"1) A "<<endl; cout<<"2) B "<<endl;
+		cin>>ab;
+		if (ab==1)
+			mostrar(a,row,col);
+		if (ab==2)
+			mostrar(b,row,col);
+		break;
+	case 3:
+	cout<<"Digite que MATRIZ desea usar:";
+	cout<<"1) A"<<endl; cout<<"2) B";
+	cin>>ab;
+	if(ab==1)
+	ordenar(a,row,col);
+	if(ab==2)
+	ordenar(b,row,col);
+		break;
+	case 4:
+		mayor(a,row,col);
+		mayor(b,row,col);
+		break;
+	case 5:
+		suma(a,row,col);
+		suma(b,row,col);
+		break;
+	case 0:
+		cout<<"Saliendo..."<<endl;
+		break;
+	default:
+		cout<<"OPCION INVALIDA"<<endl;
+		break;
+
+}
+getch();
+}
+
+void cargar(int m[MAXROW][MAXCOL],int x ,int y)
+{
+	for (int i=0;i<x;i++){
+		for(int j=0;j<y;j++){
+			cout<<"Digite un valor para la MAT ["<<i<<"]["<<j<<"] = ";
+			cin>>m[i][j];}
+	}	
+}
+void mostrar(int m[MAXROW][MAXCOL],int x, int y)
+{int i, j;
+ 
+  for(i=0;i<x;i++){
+   for(j=0;j<y;j++){
+       cout<<"MAT ["<<i<<"] ["<<j<<"]: "<<m[i][j]<<endl;   
+   }
+  }
+}
+void ordenar(int m[MAXROW][MAXCOL],int x,int y)
+{	int ma,mb,aux;
+		for(int i=0;i<x;i++){
+			for(int j=0;j<y;j++){
+			ma=m[i][j];
+				for(int p=0;p<x;p++){
+					for(int q=0;q<y;q++){
+					mb=m[p][q];
+						if (mb>ma){
+							aux=ma;
+							ma=mb;
+							mb;aux;
+						}
+					}
+				}
+			}
+		}
+}
+
+int mayor (int matrix[MAXROW][MAXCOL],int n, int m)
+{int tmayor,i, j;
+ 
+tmayor= matrix[0][0];
+  for(i=0;i<n;i++)
+   for(j=0;j<m;j++)
+	{ if(tmayor<matrix[i][j])
+			tmayor=matrix[i][j];
+   
+     }
+return tmayor;
+}
+
+
