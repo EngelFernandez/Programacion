@@ -127,7 +127,6 @@ do{
 				system("cls");
 				cout<<"En que podemos ayudarlo?"<<endl;
 				do{
-					cin.ignore();
 					cout<<"*******************MENU*******************"<<endl;
 					cout<<"1)Buscador"<<endl;
 					cout<<"2)Todos los productos"<<endl;
@@ -138,11 +137,12 @@ do{
 					switch(op)
 					{
 					case 1: //Buscador
+						cin.ignore();
 						if (resp=false)
 								cout<<"Sin Datos,Por favor consulte con el ADMIN"<<endl;
 							else
 							{	
-								cin.ignore();
+								
 								cout<<"BUSCADOR"<<endl;
 								cout<<"Escriba el nombre de un producto para buscar mas informacion sobre el: ";
 								getline(cin,palabra);
@@ -152,7 +152,7 @@ do{
 							}
 					break;
 					case 2:	//Categorias
-						cin.ignore();
+			
 						cout<<"Categorias"<<endl;
 						if (resp=false)
 								cout<<"Sin Datos,Por favor consulte con el ADMIN"<<endl;
@@ -212,8 +212,10 @@ void cambiarubicacion(string matrix[MAXROW][MAXCOL], int tamtotal)
 	}
 		cout<<"Digite el numero del producto que desea cambiar de ubicacion "<<endl;
 		cin>>n;
+		cin.ignore();
 		cout<<"Digite la nueva ubicacion(Sector/Pasillo/Numero) para el producto N"<<n<<" "<<matrix[n][0]<<endl;
 		getline(cin,matrix[n][2]);
+
 	system("pause");
 	system("cls");
 }
@@ -228,6 +230,7 @@ void cambiarprecio(string matrix[MAXROW][MAXCOL], int tamtotal)
 	}
 		cout<<"Digite el numero del producto que desea cambiar de Precio "<<endl;
 		cin>>n;
+		cin.ignore();
 		cout<<"Digite el nuevo precio para el producto N"<<n<<" "<<matrix[n][0]<<endl;
 		getline(cin,matrix[n][1]);
 	system("pause");
